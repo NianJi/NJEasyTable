@@ -7,6 +7,7 @@
 //
 
 #import "NJEasyTableSection.h"
+#import "NSObject+NJEasyTable.h"
 
 NSString *const NJEasyTableSectionNumberOfRowsAttributeKey = @"NJEasyTableSectionNumberOfRowsAttributeKey";
 
@@ -19,6 +20,14 @@ NSString *const NJEasyTableSectionNumberOfRowsAttributeKey = @"NJEasyTableSectio
 @end
 
 @implementation NJEasyTableSection
+
+- (void)setModel:(id)model {
+    if (_model != model) {
+        [_model setNj_modelObj:nil];
+        _model = model;
+        [_model setNj_modelObj:self];
+    }
+}
 
 - (instancetype)initWithModel:(id)model {
     self = [super init];

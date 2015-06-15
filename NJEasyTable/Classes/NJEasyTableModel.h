@@ -56,6 +56,9 @@ extern NSString *const NJEasyTableRowCellHeightAttributeKey;
 - (NJEasyTableRow *)rowAtIndexPath:(NSIndexPath *)indexPath;
 - (id)modelAtIndexPath:(NSIndexPath *)indexPath;
 
+- (NSInteger)sectionForModel:(id)model;
+- (NSIndexPath *)indexPathForModel:(id)model;
+
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfRowsInSection:(NSInteger)section;
 

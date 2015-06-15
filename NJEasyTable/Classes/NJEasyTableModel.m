@@ -11,6 +11,7 @@
 #import <objc/runtime.h>
 #import "NJEasyTableSection.h"
 #import "NJEasyTableRow.h"
+#import "NSObject+NJEasyTable.h"
 
 const char NJEasyTableModelNumberOfRowsKey;
 
@@ -171,6 +172,26 @@ const char NJEasyTableModelNumberOfRowsKey;
         } else {
             return section.model;
         }
+    } else {
+        return nil;
+    }
+}
+
+- (NSInteger)sectionForModel:(id)model {
+    NJNode *node = [model nj_modelObj];
+    if ([node isKindOfClass:[NJEasyTableSection class]]) {
+        return [(NJEasyTableSection *)node section];
+    } else if ([node isKindOfClass:[NJEasyTableRow class]]) {
+        return [(NJEasyTableRow *)node indexPath].section;
+    } else {
+        return NSNotFound;
+    }
+}
+
+- (NSIndexPath *)indexPathForModel:(id)model {
+    NJNode *node = [model nj_modelObj];
+    if ([node isKindOfClass:[NJEasyTableRow class]]) {
+        return [(NJEasyTableRow *)node indexPath];
     } else {
         return nil;
     }
