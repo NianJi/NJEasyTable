@@ -9,7 +9,8 @@
 #import "NJEasyTableRow.h"
 #import "NSObject+NJEasyTable.h"
 
-NSString *const NJEasyTableRowCellHeightAttributeKey = @"NJEasyTableRowCellHeightAttributeKey";
+NSString *const NJEasyTableRowCellHeightAttributeKey = @"NJEasyTableRowCellHeight";
+NSString *const NJEasyTableRowIdentifierAttributeKey = @"NJEasyTableRowIdentifier";
 
 @implementation NJEasyTableRow
 

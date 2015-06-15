@@ -18,10 +18,22 @@
 extern NSString *const NJEasyTableSectionNumberOfRowsAttributeKey;
 
 /**
+ *  set the identifier of `NJEasyTableSection`.
+ *  value should be `NSString`.
+ */
+extern NSString *const NJEasyTableSectionIdentifierAttributeKey;
+
+/**
  *  attribute key of `addRowWithModel:attributes:` method
  *  value should be `NSNumber`, which means the height of TableViewCell
  */
 extern NSString *const NJEasyTableRowCellHeightAttributeKey;
+
+/**
+ *  set the identifier of `NJEasyTableRow`.
+ *  value should be `NSString`.
+ */
+extern NSString *const NJEasyTableRowIdentifierAttributeKey;
 
 /**
  *  the model object of table view
@@ -55,6 +67,7 @@ extern NSString *const NJEasyTableRowCellHeightAttributeKey;
 - (NJEasyTableSection *)sectionAtIndex:(NSInteger)index;
 - (NJEasyTableRow *)rowAtIndexPath:(NSIndexPath *)indexPath;
 - (id)modelAtIndexPath:(NSIndexPath *)indexPath;
+- (NSString *)identifierAtIndexPath:(NSIndexPath *)indexPath;
 
 - (NSInteger)sectionForModel:(id)model;
 - (NSIndexPath *)indexPathForModel:(id)model;

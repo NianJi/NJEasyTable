@@ -9,7 +9,8 @@
 #import "NJEasyTableSection.h"
 #import "NSObject+NJEasyTable.h"
 
-NSString *const NJEasyTableSectionNumberOfRowsAttributeKey = @"NJEasyTableSectionNumberOfRowsAttributeKey";
+NSString *const NJEasyTableSectionNumberOfRowsAttributeKey = @"NJEasyTableSectionNumberOfRows";
+NSString *const NJEasyTableSectionIdentifierAttributeKey = @"NJEasyTableSectionIdentifier";
 
 @interface NJEasyTableSection ()
 {
