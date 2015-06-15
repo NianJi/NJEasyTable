@@ -7,10 +7,19 @@
 //
 
 #import "NJEasyTableRow.h"
+#import "NSObject+NJEasyTable.h"
 
 NSString *const NJEasyTableRowCellHeightAttributeKey = @"NJEasyTableRowCellHeightAttributeKey";
 
 @implementation NJEasyTableRow
+
+- (void)setModel:(id)model {
+    if (_model != model) {
+        [_model setNj_modelObj:nil];
+        _model = model;
+        [_model setNj_modelObj:self];
+    }
+}
 
 - (id)initWithModel:(id)model {
     self = [super init];

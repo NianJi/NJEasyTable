@@ -21,6 +21,7 @@
 		A3D9FA691B296ABE00CC2A5C /* NJNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D9FA681B296ABE00CC2A5C /* NJNode.m */; };
 		A3D9FA6C1B296F1F00CC2A5C /* NJEasyTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D9FA6B1B296F1F00CC2A5C /* NJEasyTableSection.m */; };
 		A3D9FA6F1B296F3200CC2A5C /* NJEasyTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D9FA6E1B296F3200CC2A5C /* NJEasyTableRow.m */; };
+		A3E2BD601B2E6E4900FDC540 /* NSObject+NJEasyTable.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E2BD5F1B2E6E4900FDC540 /* NSObject+NJEasyTable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		A3D9FA6B1B296F1F00CC2A5C /* NJEasyTableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJEasyTableSection.m; sourceTree = "<group>"; };
 		A3D9FA6D1B296F3200CC2A5C /* NJEasyTableRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJEasyTableRow.h; sourceTree = "<group>"; };
 		A3D9FA6E1B296F3200CC2A5C /* NJEasyTableRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJEasyTableRow.m; sourceTree = "<group>"; };
+		A3E2BD5E1B2E6E4900FDC540 /* NSObject+NJEasyTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NJEasyTable.h"; sourceTree = "<group>"; };
+		A3E2BD5F1B2E6E4900FDC540 /* NSObject+NJEasyTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NJEasyTable.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 				A3D9FA6B1B296F1F00CC2A5C /* NJEasyTableSection.m */,
 				A3D9FA6D1B296F3200CC2A5C /* NJEasyTableRow.h */,
 				A3D9FA6E1B296F3200CC2A5C /* NJEasyTableRow.m */,
+				A3E2BD5E1B2E6E4900FDC540 /* NSObject+NJEasyTable.h */,
+				A3E2BD5F1B2E6E4900FDC540 /* NSObject+NJEasyTable.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				A3B398531B25417600DD5B5C /* SecondViewController.m in Sources */,
 				A3D9FA6F1B296F3200CC2A5C /* NJEasyTableRow.m in Sources */,
 				A3B3984D1B25417600DD5B5C /* AppDelegate.m in Sources */,
+				A3E2BD601B2E6E4900FDC540 /* NSObject+NJEasyTable.m in Sources */,
 				A3B398501B25417600DD5B5C /* FirstViewController.m in Sources */,
 				A3D9FA691B296ABE00CC2A5C /* NJNode.m in Sources */,
 				A3B3984A1B25417600DD5B5C /* main.m in Sources */,
