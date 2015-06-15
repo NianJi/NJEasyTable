@@ -177,6 +177,20 @@ const char NJEasyTableModelNumberOfRowsKey;
     }
 }
 
+- (NSString *)identifierAtIndexPath:(NSIndexPath *)indexPath {
+    NJEasyTableSection *section = (NJEasyTableSection *)[self childAtIndex:indexPath.section];
+    if (section) {
+        NJEasyTableRow *row = (NJEasyTableRow *)[section childAtIndex:indexPath.row];
+        if (row) {
+            return row.identifier;
+        } else {
+            return section.identifier;
+        }
+    } else {
+        return nil;
+    }
+}
+
 - (NSInteger)sectionForModel:(id)model {
     NJNode *node = [model nj_modelObj];
     if ([node isKindOfClass:[NJEasyTableSection class]]) {
