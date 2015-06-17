@@ -39,7 +39,7 @@ const char NJEasyTableModelNumberOfRowsKey;
         for (id model in sectionModels) {
             NSDictionary *attributes = nil;
             if (setterBlock) {
-                setterBlock(model);
+                attributes = setterBlock(model);
             }
             NJEasyTableSection *section = [[NJEasyTableSection alloc] initWithModel:model attributes:attributes];
             [self addChild:section];
@@ -96,7 +96,7 @@ const char NJEasyTableModelNumberOfRowsKey;
         for (id model in rowModels) {
             NSDictionary *attributes = nil;
             if (setterBlock) {
-                setterBlock(model);
+                attributes = setterBlock(model);
             }
             [self addRowWithModel:model attributes:attributes inSection:section];
         }
