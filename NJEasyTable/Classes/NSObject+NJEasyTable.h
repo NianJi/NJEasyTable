@@ -10,6 +10,8 @@
 
 @interface NSObject (NJEasyTable)
 
-@property (nonatomic, weak) id nj_modelObj;
+- (void)nj_registNodeObject:(id)node;
+- (NSArray *)nj_nodeObjects;
+- (void)nj_unregistNodeObject:(id)node;
 
 @end

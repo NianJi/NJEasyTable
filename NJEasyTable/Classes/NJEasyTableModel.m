@@ -192,23 +192,36 @@ const char NJEasyTableModelNumberOfRowsKey;
 }
 
 - (NSInteger)sectionForModel:(id)model {
-    NJNode *node = [model nj_modelObj];
-    if ([node isKindOfClass:[NJEasyTableSection class]]) {
-        return [(NJEasyTableSection *)node section];
-    } else if ([node isKindOfClass:[NJEasyTableRow class]]) {
-        return [(NJEasyTableRow *)node indexPath].section;
-    } else {
-        return NSNotFound;
+    
+    NSArray *nodes = [model nj_nodeObjects];
+    for (NJNode *node in nodes) {
+        if ([node isKindOfClass:[NJEasyTableSection class]]) {
+            if (node.parent == self) {
+                return [(NJEasyTableSection *)node section];
+            }
+        } else if ([node isKindOfClass:[NJEasyTableRow class]]) {
+            if (node.parent.parent == self) {
+                return [(NJEasyTableRow *)node indexPath].section;
+            }
+        } else {
+            return NSNotFound;
+        }
     }
+    return NSNotFound;
 }
 
 - (NSIndexPath *)indexPathForModel:(id)model {
-    NJNode *node = [model nj_modelObj];
-    if ([node isKindOfClass:[NJEasyTableRow class]]) {
-        return [(NJEasyTableRow *)node indexPath];
-    } else {
-        return nil;
+    NSArray *nodes = [model nj_nodeObjects];
+    for (NJNode *node in nodes) {
+        if ([node isKindOfClass:[NJEasyTableRow class]]) {
+            if (node.parent.parent == self) {
+                return [(NJEasyTableRow *)node indexPath];
+            }
+        } else {
+            return nil;
+        }
     }
+    return nil;
 }
 
 - (NSInteger)numberOfSections {

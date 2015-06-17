@@ -9,39 +9,35 @@
 #import "NSObject+NJEasyTable.h"
 #import <objc/runtime.h>
 
-const char NJEasyTableModelOfObjectKey;
-
-@interface NJWeakContainer : NSObject
-
-@property (nonatomic, weak) id object;
-
-@end
-
-@implementation NJWeakContainer
-
-- (instancetype)initWithObject:(id)obj {
-    self = [super init];
-    if (self) {
-        self.object = obj;
-    }
-    return self;
-}
-
-@end
+const char NJEasyTableNodesOfObjectKey;
 
 @implementation NSObject (NJEasyTable)
 
-- (void)setNj_modelObj:(id)nj_modelObj {
-    if (nj_modelObj) {
-        objc_setAssociatedObject(self, &NJEasyTableModelOfObjectKey, [[NJWeakContainer alloc] initWithObject:nj_modelObj], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    } else {
-        objc_setAssociatedObject(self, &NJEasyTableModelOfObjectKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)nj_registNodeObject:(id)node {
+    if (node) {
+        NSHashTable *hashTable = objc_getAssociatedObject(self, &NJEasyTableNodesOfObjectKey);
+        if (!hashTable) {
+            hashTable = [NSHashTable weakObjectsHashTable];
+            objc_setAssociatedObject(self, &NJEasyTableNodesOfObjectKey, hashTable, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        }
+        if (![hashTable containsObject:node]) {
+            [hashTable addObject:node];
+        }
     }
 }
 
-- (id)nj_modelObj {
-    NJWeakContainer *container = objc_getAssociatedObject(self, &NJEasyTableModelOfObjectKey);
-    return container.object;
+- (NSArray *)nj_nodeObjects {
+    NSHashTable *hashTable = objc_getAssociatedObject(self, &NJEasyTableNodesOfObjectKey);
+    return hashTable.allObjects;
+}
+
+- (void)nj_unregistNodeObject:(id)node {
+    if (node) {
+        NSHashTable *hashTable = objc_getAssociatedObject(self, &NJEasyTableNodesOfObjectKey);
+        if ([hashTable containsObject:node]) {
+            [hashTable removeObject:node];
+        }
+    }
 }
 
 @end
