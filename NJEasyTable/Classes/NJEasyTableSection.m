@@ -24,9 +24,8 @@ NSString *const NJEasyTableSectionIdentifierAttributeKey = @"NJEasyTableSectionI
 
 - (void)setModel:(id)model {
     if (_model != model) {
-        [_model setNj_modelObj:nil];
         _model = model;
-        [_model setNj_modelObj:self];
+        [_model nj_unregistNodeObject:self];
     }
 }
 
