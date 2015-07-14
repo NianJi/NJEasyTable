@@ -177,6 +177,15 @@ const char NJEasyTableModelNumberOfRowsKey;
     }
 }
 
+- (id)modelAtSection:(NSInteger)section {
+    NJEasyTableSection *sectionModel = (NJEasyTableSection *)[self childAtIndex:section];
+    if (sectionModel) {
+        return sectionModel.model;
+    } else {
+        return nil;
+    }
+}
+
 - (NSString *)identifierAtIndexPath:(NSIndexPath *)indexPath {
     NJEasyTableSection *section = (NJEasyTableSection *)[self childAtIndex:indexPath.section];
     if (section) {

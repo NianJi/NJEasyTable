@@ -67,6 +67,7 @@ extern NSString *const NJEasyTableRowIdentifierAttributeKey;
 - (NJEasyTableSection *)sectionAtIndex:(NSInteger)index;
 - (NJEasyTableRow *)rowAtIndexPath:(NSIndexPath *)indexPath;
 - (id)modelAtIndexPath:(NSIndexPath *)indexPath;
+- (id)modelAtSection:(NSInteger)section;
 - (NSString *)identifierAtIndexPath:(NSIndexPath *)indexPath;
 
 - (NSInteger)sectionForModel:(id)model;
