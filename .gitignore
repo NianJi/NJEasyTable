@@ -2,3 +2,7 @@
 Pods/
 xcshareddata
 xcuserdata
+
+Podfile
+Podfile.lock
+NJEasyTable.xcworkspace
