@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.author             = { "念纪" => "fengnianji@gmail.com" }
   s.source       = { :git => "https://github.com/NianJi/NJEasyTable.git", :tag => "0.0.1" }
 
-  s.source_files  = "NJEasyTable/Classes/**/*.{h,m}"
+  s.source_files  = "sources/**/*.{h,m}"
 
   s.requires_arc = true
 
