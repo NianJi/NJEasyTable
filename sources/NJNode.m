@@ -22,9 +22,10 @@
     if ([children isKindOfClass:[NSArray class]]) {
         @synchronized(self) {
             _children = [[NSMutableArray alloc] initWithCapacity:[children count]];
-        }
-        for (id obj in children) {
-            [self addChild:obj];
+            for (NJNode *node in children) {
+                node.parent = self;
+                [_children addObject:node];
+            }
         }
     } else {
         @synchronized(self) {
@@ -93,11 +94,21 @@
     }
 }
 
-- (void)removeChildAtIndex:(NSInteger)index {
+- (void)removeChildAtIndex:(NSUInteger)index {
     @synchronized(self) {
         if (_children.count > index) {
             [_children removeObjectAtIndex:index];
         }
+    }
+}
+
+- (void)removeChildAtIndexSet:(NSIndexSet *)indexSet {
+    @synchronized(self) {
+        [indexSet enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+            if (_children.count > idx) {
+                [_children removeObjectAtIndex:idx];
+            }
+        }];
     }
 }
 

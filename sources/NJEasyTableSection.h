@@ -16,9 +16,12 @@
 
 @property (nonatomic, strong) id model;
 @property (nonatomic, copy)   NSString *identifier;
+@property (nonatomic, assign) CGFloat  sectionHeaderHeight;
+@property (nonatomic, assign) CGFloat  sectionFooterHeight;
+
++ (instancetype)sectionWithModel:(id)model;
 
 - (instancetype)initWithModel:(id)model;
-- (instancetype)initWithModel:(id)model attributes:(NSDictionary *)attributes;
 
 - (NSInteger)numberOfRows;
 - (void)setNumberOfRows:(NSInteger)numberOfRows;

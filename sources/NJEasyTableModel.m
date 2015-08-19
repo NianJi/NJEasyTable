@@ -13,8 +13,6 @@
 #import "NJEasyTableRow.h"
 #import "NSObject+NJEasyTable.h"
 
-const char NJEasyTableModelNumberOfRowsKey;
-
 @interface NJEasyTableModel ()
 
 
@@ -22,129 +20,28 @@ const char NJEasyTableModelNumberOfRowsKey;
 
 @implementation NJEasyTableModel
 
-- (void)addSectionWithModel:(id)model {
-    [self addChild:[[NJEasyTableSection alloc] initWithModel:model]];
+- (void)addSection:(NJEasyTableSection *)section {
+    [self addChild:section];
 }
 
-- (void)addSectionWithModel:(id)model attributes:(NSDictionary *)attributes {
-    [self addChild:[[NJEasyTableSection alloc] initWithModel:model attributes:attributes]];
+- (void)addSections:(NSArray *)sections {
+    [self addChildFromArray:sections];
 }
 
-- (void)addSectionsWithModels:(NSArray *)sectionModels {
-    [self addSectionsWithModels:sectionModels attributeSetter:nil];
+- (void)setSections:(NSArray *)sections {
+    [self setChildren:sections];
 }
 
-- (void)addSectionsWithModels:(NSArray *)sectionModels attributeSetter:(NSDictionary *(^)(id model))setterBlock {
-    if (sectionModels.count) {
-        for (id model in sectionModels) {
-            NSDictionary *attributes = nil;
-            if (setterBlock) {
-                attributes = setterBlock(model);
-            }
-            NJEasyTableSection *section = [[NJEasyTableSection alloc] initWithModel:model attributes:attributes];
-            [self addChild:section];
-        }
-    }
-}
-
-- (void)setSectionsWithModels:(NSArray *)sectionModels {
-    [self setSectionsWithModels:sectionModels attributeSetter:nil];
-}
-
-- (void)setSectionsWithModels:(NSArray *)sectionModels attributeSetter:(NSDictionary *(^)(id model))setterBlock {
-    [self removeAllChild];
-    [self addSectionsWithModels:sectionModels attributeSetter:setterBlock];
-}
-
-- (void)insertSectionWithModel:(id)model atIndex:(NSInteger)index {
-    [self insertSectionWithModel:model attributes:nil atIndex:index];
-}
-
-- (void)insertSectionWithModel:(id)model attributes:(NSDictionary *)attributes atIndex:(NSInteger)index {
-    NJEasyTableSection *section = [[NJEasyTableSection alloc] initWithModel:model attributes:attributes];
+- (void)insertSection:(NJEasyTableSection *)section atIndex:(NSUInteger)index {
     [self insertChild:section atIdex:index];
 }
 
-- (void)removeAllSections {
-    [self removeAllChild];
-}
-
-- (void)removeSectionAtIndex:(NSInteger)index {
+- (void)removeSectionAtIndex:(NSUInteger)index {
     [self removeChildAtIndex:index];
 }
 
-- (void)addRowWithModel:(id)model inSection:(NSInteger)section {
-    [self addRowWithModel:model attributes:nil inSection:section];
-}
-
-- (void)addRowWithModel:(id)model attributes:(NSDictionary *)attributes inSection:(NSInteger)section {
-    NJEasyTableSection *sectionModel = [self sectionAtIndex:section];
-    if (!sectionModel) {
-        sectionModel = [[NJEasyTableSection alloc] initWithModel:nil];
-        [self insertChild:sectionModel atIdex:section];
-    }
-    NJEasyTableRow *row = [[NJEasyTableRow alloc] initWithModel:model attributes:attributes];
-    [sectionModel addRow:row];
-}
-
-- (void)addRowsWithModels:(NSArray *)rowModels inSection:(NSInteger)section {
-    [self addRowsWithModels:rowModels attributeSetter:nil inSection:section];
-}
-
-- (void)addRowsWithModels:(NSArray *)rowModels attributeSetter:(NSDictionary *(^)(id model))setterBlock inSection:(NSInteger)section {
-    if (rowModels.count) {
-        for (id model in rowModels) {
-            NSDictionary *attributes = nil;
-            if (setterBlock) {
-                attributes = setterBlock(model);
-            }
-            [self addRowWithModel:model attributes:attributes inSection:section];
-        }
-    }
-}
-
-- (void)setRowsWithModels:(NSArray *)rowModels inSection:(NSInteger)section {
-    [self setRowsWithModels:rowModels attributeSetter:nil inSection:section];
-}
-
-- (void)setRowsWithModels:(NSArray *)rowModels attributeSetter:(NSDictionary *(^)(id model))setterBlock inSection:(NSInteger)section {
-    if (rowModels.count) {
-        NJEasyTableSection *sectionModel = [self sectionAtIndex:section];
-        [sectionModel removeAllChild];
-        [self addRowsWithModels:rowModels attributeSetter:setterBlock inSection:section];
-    } else {
-        [self removeSectionAtIndex:section];
-    }
-}
-
-- (void)insertRowWithModel:(id)model atIndex:(NSInteger)index inSection:(NSInteger)section {
-    [self insertRowWithModel:model atIndex:index inSection:section];
-}
-
-- (void)insertRowWithModel:(id)model attributes:(NSDictionary *)attributes atIndex:(NSInteger)index inSection:(NSInteger)section {
-    if (model) {
-        NJEasyTableSection *sectionModel = [self sectionAtIndex:section];
-        if (!sectionModel) {
-            sectionModel = [[NJEasyTableSection alloc] initWithModel:nil];
-            [self insertChild:sectionModel atIdex:section];
-        }
-        NJEasyTableRow *row = [[NJEasyTableRow alloc] initWithModel:model attributes:attributes];
-        [sectionModel insertChild:row atIdex:section];
-    }
-}
-
-- (void)removeRowAtIndexPath:(NSIndexPath *)indexPath {
-    [[self rowAtIndexPath:indexPath] removeFromParent];
-}
-
-- (void)setCellHeight:(CGFloat)cellHeight atIndexPath:(NSIndexPath *)indexPath {
-    NJEasyTableSection *section = [self sectionAtIndex:indexPath.section];
-    [section setCellHeight:cellHeight atRow:indexPath.row];
-}
-
-- (CGFloat)cellHeightAtIndexPath:(NSIndexPath *)indexPath {
-    NJEasyTableSection *section = [self sectionAtIndex:indexPath.section];
-    return [section cellHeightAtRow:indexPath.row];
+- (void)removeSectionsAtIndexSet:(NSIndexSet *)indexSet {
+    [self removeChildAtIndexSet:indexSet];
 }
 
 - (NJEasyTableSection *)sectionAtIndex:(NSInteger)index {
@@ -245,6 +142,24 @@ const char NJEasyTableModelNumberOfRowsKey;
     } else {
         return 0;
     }
+}
+
+- (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NJEasyTableRow *row = [self rowAtIndexPath:indexPath];
+    CGFloat height = row.cellHeight ?: self.ownerTableView.rowHeight;
+    return height;
+}
+
+- (CGFloat)heightForHeaderAtSection:(NSUInteger)section {
+    NJEasyTableSection *sectionModel = [self sectionAtIndex:section];
+    CGFloat height = sectionModel.sectionHeaderHeight ?: self.ownerTableView.sectionHeaderHeight;
+    return height;
+}
+
+- (CGFloat)heightForFooterAtSection:(NSUInteger)section {
+    NJEasyTableSection *sectionModel = [self sectionAtIndex:section];
+    CGFloat height = sectionModel.sectionFooterHeight ?: self.ownerTableView.sectionFooterHeight;
+    return height;
 }
 
 @end
