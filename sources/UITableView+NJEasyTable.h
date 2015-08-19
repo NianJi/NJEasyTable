@@ -16,6 +16,7 @@
 
 /**
  *  then table model object of UITableView.
+ *  user this object to manage models and cache datas
  */
 @property (nonatomic, strong, readonly) NJEasyTableModel *nj_TableModel;
 

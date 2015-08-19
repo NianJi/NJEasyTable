@@ -14,8 +14,9 @@
 @property (nonatomic, copy)   NSString *identifier;
 @property (nonatomic, assign) CGFloat cellHeight;
 
++ (instancetype)rowWithModel:(id)model;
+
 - (instancetype)initWithModel:(id)model;
-- (instancetype)initWithModel:(id)model attributes:(NSDictionary *)attributes;
 
 - (NSIndexPath *)indexPath;
 

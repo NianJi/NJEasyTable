@@ -17,7 +17,8 @@
 - (void)addChildFromArray:(NSArray *)array;
 - (void)insertChild:(NJNode *)node atIdex:(NSUInteger)index;
 - (void)removeChild:(NJNode *)node;
-- (void)removeChildAtIndex:(NSInteger)index;
+- (void)removeChildAtIndex:(NSUInteger)index;
+- (void)removeChildAtIndexSet:(NSIndexSet *)indexSet;
 
 - (void)removeFromParent;
 - (void)removeAllChild;

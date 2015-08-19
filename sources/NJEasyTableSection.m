@@ -9,9 +9,6 @@
 #import "NJEasyTableSection.h"
 #import "NSObject+NJEasyTable.h"
 
-NSString *const NJEasyTableSectionNumberOfRowsAttributeKey = @"NJEasyTableSectionNumberOfRows";
-NSString *const NJEasyTableSectionIdentifierAttributeKey = @"NJEasyTableSectionIdentifier";
-
 @interface NJEasyTableSection ()
 {
     NSInteger   _numberOfRows;
@@ -29,31 +26,17 @@ NSString *const NJEasyTableSectionIdentifierAttributeKey = @"NJEasyTableSectionI
     }
 }
 
++ (instancetype)sectionWithModel:(id)model
+{
+    return [[self alloc] initWithModel:model];
+}
+
 - (instancetype)initWithModel:(id)model {
     self = [super init];
     if (self) {
         self.model = model;
     }
     return self;
-}
-
-- (instancetype)initWithModel:(id)model attributes:(NSDictionary *)attributes {
-    self = [super init];
-    if (self) {
-        self.model = model;
-        [self parseAttributes:attributes];
-    }
-    return self;
-}
-
-- (void)parseAttributes:(NSDictionary *)attributes {
-    
-    if (attributes) {
-        NSNumber *numberOfRows = attributes[NJEasyTableSectionNumberOfRowsAttributeKey];
-        if ([numberOfRows isKindOfClass:[NSNumber class]]) {
-            [self setNumberOfRows:numberOfRows.integerValue];
-        }
-    }
 }
 
 - (NSInteger)numberOfRows {

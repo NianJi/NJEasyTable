@@ -18,6 +18,7 @@ const char NJEasyTableCellKey;
     NJEasyTableModel *model = objc_getAssociatedObject(self, &NJEasyTableModelKey);
     if (!model) {
         model = [[NJEasyTableModel alloc] init];
+        model.ownerTableView = self;
         objc_setAssociatedObject(self, &NJEasyTableModelKey, model, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return model;
@@ -43,7 +44,7 @@ const char NJEasyTableCellKey;
     
     id model = [self.nj_TableModel modelAtIndexPath:indexPath];
     
-    CGFloat cellHeight = [self.nj_TableModel cellHeightAtIndexPath:indexPath];
+    CGFloat cellHeight = [self.nj_TableModel heightForRowAtIndexPath:indexPath];
     if (cellHeight > 0) {
         return cellHeight;
     }
@@ -75,12 +76,12 @@ const char NJEasyTableCellKey;
     height += 1.0f;
     
     // cache the height
-    [self.nj_TableModel setCellHeight:height atIndexPath:indexPath];
+    [[self.nj_TableModel rowAtIndexPath:indexPath] setCellHeight:height];
     return height;
 }
 
 - (void)nj_invalidateIntrinsicHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.nj_TableModel setCellHeight:0 atIndexPath:indexPath];
+    [[self.nj_TableModel rowAtIndexPath:indexPath] setCellHeight:0];
 }
 
 @end
