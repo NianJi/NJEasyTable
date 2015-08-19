@@ -146,8 +146,17 @@
 
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     NJEasyTableRow *row = [self rowAtIndexPath:indexPath];
-    CGFloat height = row.cellHeight ?: self.ownerTableView.rowHeight;
-    return height;
+    if (row) {
+        CGFloat height = row.cellHeight ?: self.ownerTableView.rowHeight;
+        return height;
+    }
+    else {
+        NJEasyTableSection *section = [self sectionAtIndex:indexPath.section];
+        if (section) {
+            return [section cellHeightAtRow:indexPath.row];
+        }
+    }
+    return self.ownerTableView.rowHeight;
 }
 
 - (CGFloat)heightForHeaderAtSection:(NSUInteger)section {
