@@ -9,10 +9,18 @@ A plugin of UITableView can easy manage models and auto calculate cell height wi
 
 ## Set up models
 
-You can bind any Object to `nj_TableModel`. 
+You can add sections and rows to `nj_TableModel`. 
 
 ```
-[self.tableView.nj_TableModel addRowsWithModels:array inSection:0];
+[self.tableView.nj_TableModel addSection:({
+        NJEasyTableSection *section = [[NJEasyTableSection alloc] initWithModel:nil];
+        [section addRow:({
+            NJEasyTableRow *row = [[NJEasyTableRow alloc] initWithModel:model];
+            row.cellHeight = 44;
+            row;
+        })];
+        section;
+})];
 
 ```
 
