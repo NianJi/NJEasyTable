@@ -171,5 +171,23 @@
     return height;
 }
 
+- (CGFloat)preferredTotalContentHeight
+{
+    CGFloat height = 0;
+    for (NJEasyTableSection *section in self.children) {
+        
+        if (section.sectionHeaderHeight > 0) {
+            height += section.sectionHeaderHeight;
+        }
+        for (NJEasyTableRow *row in section.children) {
+            height += row.cellHeight;
+        }
+        if (section.sectionFooterHeight > 0) {
+            height += section.sectionFooterHeight;
+        }
+    }
+    return height;
+}
+
 @end
 
