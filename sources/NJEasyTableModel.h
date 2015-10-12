@@ -41,6 +41,8 @@
 - (CGFloat)heightForHeaderAtSection:(NSUInteger)section;
 - (CGFloat)heightForFooterAtSection:(NSUInteger)section;
 
+- (CGFloat)preferredTotalContentHeight;
+
 @end
 
 

@@ -102,4 +102,16 @@
     [self insertChild:row atIdex:index];
 }
 
+- (void)removeRowAtIndex:(NSUInteger)index {
+    [self removeChildAtIndex:index];
+}
+
+- (void)removeRowsForIdentifier:(NSString *)identifier {
+    [self.children enumerateObjectsUsingBlock:^(NJEasyTableRow *row, NSUInteger idx, BOOL *stop) {
+        if ([row.identifier isEqualToString:identifier]) {
+            [row removeFromParent];
+        }
+    }];
+}
+
 @end

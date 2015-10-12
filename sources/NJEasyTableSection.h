@@ -35,5 +35,7 @@
 - (void)addRows:(NSArray *)rows;
 - (void)setRows:(NSArray *)rows;
 - (void)insertRow:(NJEasyTableRow *)row atIndex:(NSInteger)index;
+- (void)removeRowAtIndex:(NSUInteger)index;
+- (void)removeRowsForIdentifier:(NSString *)identifier;
 
 @end
