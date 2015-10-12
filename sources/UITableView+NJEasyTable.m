@@ -3,7 +3,7 @@
 //  NJEasyTable
 //
 //  Created by 念纪 on 15/6/8.
-//  Copyright (c) 2015年 cnbluebox. All rights reserved.
+//  Copyright (c) 2015年 NianJi. All rights reserved.
 //
 
 #import "UITableView+NJEasyTable.h"
