@@ -22,7 +22,7 @@
 - (void)setModel:(id)model {
     if (_model != model) {
         _model = model;
-        [_model nj_unregistNodeObject:self];
+        [_model nj_registNodeObject:self];
     }
 }
 
