@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = '6.0'
 
-  s.homepage     = "http://github.com/NianJi/NJEasyTable"
+  s.homepage     = "https://github.com/NianJi/NJEasyTable"
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
   s.author       = { "念纪" => "fengnianji@gmail.com" }
