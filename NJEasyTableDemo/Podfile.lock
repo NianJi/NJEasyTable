@@ -1,0 +1,13 @@
+PODS:
+  - Masonry (0.6.4)
+  - NJEasyTable (1.0.1)
+
+DEPENDENCIES:
+  - Masonry
+  - NJEasyTable
+
+SPEC CHECKSUMS:
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  NJEasyTable: 7f077853852d0bb3e5ac0d754fc1aaab81e84e73
+
+COCOAPODS: 0.39.0

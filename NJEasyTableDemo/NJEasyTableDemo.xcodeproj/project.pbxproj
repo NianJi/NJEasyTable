@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04476F201034E51FF32C13A7 /* libPods-NJEasyTableDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F9EA83DC3D7147E7D6C792 /* libPods-NJEasyTableDemo.a */; };
+		A3B4B4681CA40AEF00846E7F /* star_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B4B4671CA40AEF00846E7F /* star_blue@2x.png */; };
+		A3F788941C955ADE00C9429E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F788931C955ADE00C9429E /* main.m */; };
+		A3F788971C955ADE00C9429E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F788961C955ADE00C9429E /* AppDelegate.m */; };
+		A3F7889A1C955ADE00C9429E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F788991C955ADE00C9429E /* ViewController.m */; };
+		A3F7889D1C955ADE00C9429E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F7889B1C955ADE00C9429E /* Main.storyboard */; };
+		A3F7889F1C955ADE00C9429E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F7889E1C955ADE00C9429E /* Assets.xcassets */; };
+		A3F788D11C955C8600C9429E /* Style1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F788D01C955C8600C9429E /* Style1Cell.m */; };
+		A3F788D41C955C9600C9429E /* Style2Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F788D31C955C9600C9429E /* Style2Cell.m */; };
+		A3F788D71C955CA500C9429E /* Style3Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F788D61C955CA500C9429E /* Style3Cell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03C62C821663769E882D2F0E /* Pods-NJEasyTableDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJEasyTableDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NJEasyTableDemo/Pods-NJEasyTableDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		6081059744D21B7EECA13C71 /* Pods-NJEasyTableDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJEasyTableDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJEasyTableDemo/Pods-NJEasyTableDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A3B4B4671CA40AEF00846E7F /* star_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_blue@2x.png"; sourceTree = "<group>"; };
+		A3F7888F1C955ADE00C9429E /* NJEasyTableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJEasyTableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F788931C955ADE00C9429E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3F788951C955ADE00C9429E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A3F788961C955ADE00C9429E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A3F788981C955ADE00C9429E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A3F788991C955ADE00C9429E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A3F7889C1C955ADE00C9429E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A3F7889E1C955ADE00C9429E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3F788A31C955ADE00C9429E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3F788CF1C955C8600C9429E /* Style1Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Style1Cell.h; sourceTree = "<group>"; };
+		A3F788D01C955C8600C9429E /* Style1Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Style1Cell.m; sourceTree = "<group>"; };
+		A3F788D21C955C9600C9429E /* Style2Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Style2Cell.h; sourceTree = "<group>"; };
+		A3F788D31C955C9600C9429E /* Style2Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Style2Cell.m; sourceTree = "<group>"; };
+		A3F788D51C955CA500C9429E /* Style3Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Style3Cell.h; sourceTree = "<group>"; };
+		A3F788D61C955CA500C9429E /* Style3Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Style3Cell.m; sourceTree = "<group>"; };
+		B0F9EA83DC3D7147E7D6C792 /* libPods-NJEasyTableDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NJEasyTableDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3F7888C1C955ADE00C9429E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04476F201034E51FF32C13A7 /* libPods-NJEasyTableDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DD564B1F18335848C4D642E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0F9EA83DC3D7147E7D6C792 /* libPods-NJEasyTableDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3F788861C955ADE00C9429E = {
+			isa = PBXGroup;
+			children = (
+				A3F788911C955ADE00C9429E /* NJEasyTableDemo */,
+				A3F788901C955ADE00C9429E /* Products */,
+				B83751AC37490A939B61B1AA /* Pods */,
+				0DD564B1F18335848C4D642E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A3F788901C955ADE00C9429E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3F7888F1C955ADE00C9429E /* NJEasyTableDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3F788911C955ADE00C9429E /* NJEasyTableDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A3F788951C955ADE00C9429E /* AppDelegate.h */,
+				A3F788961C955ADE00C9429E /* AppDelegate.m */,
+				A3F788981C955ADE00C9429E /* ViewController.h */,
+				A3F788991C955ADE00C9429E /* ViewController.m */,
+				A3F7889B1C955ADE00C9429E /* Main.storyboard */,
+				A3F7889E1C955ADE00C9429E /* Assets.xcassets */,
+				A3F788A31C955ADE00C9429E /* Info.plist */,
+				A3F788921C955ADE00C9429E /* Supporting Files */,
+				A3F788CF1C955C8600C9429E /* Style1Cell.h */,
+				A3F788D01C955C8600C9429E /* Style1Cell.m */,
+				A3F788D21C955C9600C9429E /* Style2Cell.h */,
+				A3F788D31C955C9600C9429E /* Style2Cell.m */,
+				A3F788D51C955CA500C9429E /* Style3Cell.h */,
+				A3F788D61C955CA500C9429E /* Style3Cell.m */,
+				A3B4B4671CA40AEF00846E7F /* star_blue@2x.png */,
+			);
+			path = NJEasyTableDemo;
+			sourceTree = "<group>";
+		};
+		A3F788921C955ADE00C9429E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3F788931C955ADE00C9429E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B83751AC37490A939B61B1AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03C62C821663769E882D2F0E /* Pods-NJEasyTableDemo.debug.xcconfig */,
+				6081059744D21B7EECA13C71 /* Pods-NJEasyTableDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3F7888E1C955ADE00C9429E /* NJEasyTableDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3F788A61C955ADE00C9429E /* Build configuration list for PBXNativeTarget "NJEasyTableDemo" */;
+			buildPhases = (
+				265034059C280FBCC2747249 /* Check Pods Manifest.lock */,
+				A3F7888B1C955ADE00C9429E /* Sources */,
+				A3F7888C1C955ADE00C9429E /* Frameworks */,
+				A3F7888D1C955ADE00C9429E /* Resources */,
+				00ED78B7A85B86FF5F85859F /* Embed Pods Frameworks */,
+				93B8E66D9A37205DE97683E4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NJEasyTableDemo;
+			productName = NJEasyTableDemo;
+			productReference = A3F7888F1C955ADE00C9429E /* NJEasyTableDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3F788871C955ADE00C9429E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = cnbluebox;
+				TargetAttributes = {
+					A3F7888E1C955ADE00C9429E = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = A3F7888A1C955ADE00C9429E /* Build configuration list for PBXProject "NJEasyTableDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3F788861C955ADE00C9429E;
+			productRefGroup = A3F788901C955ADE00C9429E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3F7888E1C955ADE00C9429E /* NJEasyTableDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3F7888D1C955ADE00C9429E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3F7889F1C955ADE00C9429E /* Assets.xcassets in Resources */,
+				A3F7889D1C955ADE00C9429E /* Main.storyboard in Resources */,
+				A3B4B4681CA40AEF00846E7F /* star_blue@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00ED78B7A85B86FF5F85859F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NJEasyTableDemo/Pods-NJEasyTableDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		265034059C280FBCC2747249 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		93B8E66D9A37205DE97683E4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NJEasyTableDemo/Pods-NJEasyTableDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3F7888B1C955ADE00C9429E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3F788D11C955C8600C9429E /* Style1Cell.m in Sources */,
+				A3F788D71C955CA500C9429E /* Style3Cell.m in Sources */,
+				A3F7889A1C955ADE00C9429E /* ViewController.m in Sources */,
+				A3F788971C955ADE00C9429E /* AppDelegate.m in Sources */,
+				A3F788D41C955C9600C9429E /* Style2Cell.m in Sources */,
+				A3F788941C955ADE00C9429E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A3F7889B1C955ADE00C9429E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3F7889C1C955ADE00C9429E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3F788A41C955ADE00C9429E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A3F788A51C955ADE00C9429E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3F788A71C955ADE00C9429E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03C62C821663769E882D2F0E /* Pods-NJEasyTableDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = NJEasyTableDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnbluebox.NJEasyTableDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A3F788A81C955ADE00C9429E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6081059744D21B7EECA13C71 /* Pods-NJEasyTableDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = NJEasyTableDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnbluebox.NJEasyTableDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3F7888A1C955ADE00C9429E /* Build configuration list for PBXProject "NJEasyTableDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3F788A41C955ADE00C9429E /* Debug */,
+				A3F788A51C955ADE00C9429E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3F788A61C955ADE00C9429E /* Build configuration list for PBXNativeTarget "NJEasyTableDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3F788A71C955ADE00C9429E /* Debug */,
+				A3F788A81C955ADE00C9429E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3F788871C955ADE00C9429E /* Project object */;
+}
